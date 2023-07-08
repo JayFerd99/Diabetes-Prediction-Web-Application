@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction - Result</title>
+</head>
+<style>
+    html,
+    body {
+        min-height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #672209;
+    }
+
+    .main-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 75vh;
+        background-size: cover;
+        
+    .diabetes{
+        padding: 25px;
+        margin: 25px;
+        width: 50%;
+        max-width: 600px;
+        box-shadow: 0 2px 5px #f5f5f5;
+        background: #f5f5f5;
+        border: 2px solid #672209;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    }
+    h1 {
+        margin: 0 0 20px;
+        font-weight: 400;
+        color: #672209;
+        text-align: center;
+    }
+
+    .result {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .result p {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .back-button {
+        margin-top: 20px;
+    }
+
+    .back-button a {
+        padding: 8px 16px;
+        background-color: #672209;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-left: 255px
+    }
+
+    .back-button a:hover {
+        background-color: blue;
+    }
+    .footer p{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="main-block">
+        <div class="diabetes">
+        <h1>Diabetes Prediction Result</h1>
+        <div class="result">
+            <p><strong>{{ result | safe }}</strong></p>
+        </div>
+        <div class="back-button">
+            <a href="{{ url_for('normal_page') }}">Go Back</a>
+            </div>
+        </div>
+        <footer>
+            <p><i>Developed by Temi Okorie</i></p>
+        </footer>
+    </div>
+</body>
+
+</html>

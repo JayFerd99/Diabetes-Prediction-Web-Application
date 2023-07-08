@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<link rel="stylesheet" href=styles.css>
+
+<head>
+  <title>Diabetes Prediction</title>
+</head>
+
+<body>
+  <div class="main-block">
+    <div class="left-part">
+    </div>
+    <form action="{{ url_for('predict')}}" method="post">
+      <section>
+        <h1><b>Diabetes Prediction System</b></h1>
+        <p>This Web Application is processed by a Machine Learning Algorithm to predict the probability of an individual
+          having Diabetes.</p>
+        <p><i>Note that this model is 81% accurate</i></p>
+        <div class="info">
+          <p><b>Please Enter values for the following:</b></p><br>
+          <label><i>HINT: If you're of the Male gender or have not been pregnant before, input 0</i></label>
+          <input type="number" name="Pregnancies" placeholder="Number of times pregnant" required>
+          <label><i>HINT: Plasma glucose concentration </i></label>
+          <input type="number" name="Glucose" placeholder="Glucose Level" required>
+          <label><i>HINT: Diastolic blood pressure (mm Hg)</i></label>
+          <input type="number" step=0.01 name="Blood Pressure" placeholder="Blood Pressure" required>
+          <label><i>HINT: Triceps skin fold thickness (mm)</i></label>
+          <input type="number" step=0.01 name="Skin Thickness" placeholder="Skin Thickness" required>
+          <label><i>HINT: 2-Hour serum insulin (mu U/ml)</i></label>
+          <input type="number" name="Insulin" step=0.01 placeholder="Insulin Level" required>
+          <label><i>HINT: Body Mass Index = (weight in kg/(height in m)^2)</i></label>
+          <input type="number" name="BMI" step=0.01 placeholder="Body Mass Index" required>
+          <label><i>HINT: A function which scores likelihood of diabetes based on family history</i></label>
+          <input type="number" name="DiabetesPedigreeFunction" step=0.001 placeholder="Diabetes Pedigree Function"
+            required>
+          <label><i>HINT: If you're of the Male gender or have not been pregnant before, input 0</i></label>
+          <input type="number" name="Age" placeholder="Age" required>
+        </div>
+        <button type="submit" formtarget="_self">Predict</button>
+      </section>
+    </form>
+    <footer>
+      <p><i>Developed by Temi Okorie</i></p>
+    </footer>
+  </div>
+</body>
+
+</html>
